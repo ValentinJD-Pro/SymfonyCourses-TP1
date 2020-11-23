@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carte{% endblock %}
+
+{% block body %}
+    <ul>
+            <li>
+                <h1>{{ category.name }}</h1>
+                <ul>
+                    {% for dish in dishes %}
+                        {% if dish.category.id == category.id %}
+                            <li>{{ dish.name }} - {{ dish.price }}€ - {{ dish.calories }}kcal</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+    </ul>
+
+    <a href="/carte">Retour</a>
+{% endblock %}

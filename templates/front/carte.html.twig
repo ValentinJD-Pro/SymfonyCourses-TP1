@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carte{% endblock %}
+
+
+
+
+{% block body %}
+    <ul>
+    {% for category in categories %}
+        <li>
+            <h1><a href="/carte/{{ category.id }}">{{ category.name }}</a></h1>
+
+            <ul>
+                {% set count=0 %}
+                {% for dish in dishes %}
+                    {% if dish.category.id == category.id %}
+                        {% set count=count+1 %}
+
+                    {% endif %}
+                        <li>{{ count }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

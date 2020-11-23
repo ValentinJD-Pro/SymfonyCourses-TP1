@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <ul>
+        {%  for user in eqp %}
+            <li>{{ user.firstname }} - {{ user.lastname }} - {{ user.email }} - {{ user.jotTitle }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
