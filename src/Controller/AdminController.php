@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\Dish;
 use App\Repository\AllergenRepository;
 use App\Repository\CategoryRepository;
@@ -34,24 +35,43 @@ class AdminController extends AbstractController
 
         foreach([ "desserts","entrees","plats" ] as $type)
         {
-            $category = $categoryRepo->findOneBy(array("name"=> ucfirst( $type ) ));
-            // If category does not exist, create it.
-            if( $category && isset( $data[$type] ) )
+            $category = $categoryRepo->findOneBy(array("Name"=> ucfirst( $type ) ));
+
+            if(!$category) {
+                $category=new Category();
+                $category->setName($type);
+                $em->persist($category);
+            }
+            if( $category && isset($data[$type]))
             {
                 foreach($data[$type] as $dishArray)
                 {
                     $dish = $dishRepo->findOneBy(
-                        array("name"=>$dishArray["name"])
+                        array("Name"=>$dishArray["name"])
                     );
                     if(!$dish) {
-                        $dish= new Dish(); // Insert
+                        $dish= new Dish();
                     }
                     $dish->setName($dishArray["name"]);
+                    $dish->setCalories($dishArray["calories"]);
+                    dd($dishArray["price"]);
+                    $dish->setPrice($dishArray["price"]);
+                    $dish->setDescription($dishArray["text"]);
+                    $dish->setSticky($dishArray["sticky"]);
+                    $dish->setImage($dishArray["image"]);
                     $dish->setCategory($category);
-                    //trucs ici
+                    dd($dish);
+
                     foreach($dishArray["allergens"] as $allergenArray)
                     {
-                    // Update if exist, insert if not.
+                        $a = $allergenRepo->findOneBy(["name" => $allergenArray]);
+                        if ($a === null) {
+                            $a = new Allergen();
+                            $a->setName($allergenArray);
+                        }
+                        $a->addDish($dish);
+                        $em->persist($a);
+                        $dish->addAllergen($a);
                     }
                     $em->persist($dish);
                     $em->flush();
