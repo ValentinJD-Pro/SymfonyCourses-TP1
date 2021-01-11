@@ -10,6 +10,14 @@
                     {% for dish in dishes %}
                         {% if dish.category.id == category.id %}
                             <li>{{ dish.name }} - {{ dish.price }}€ - {{ dish.calories }}kcal</li>
+                            <h5>Allergènes</h5>
+                            <p>
+                                {% for allergen in dish.allergens %}
+                                    {{ allergen.name }}
+                                {% else %}
+                                    Pas d'allergènes !
+                                {% endfor %}
+                            </p>
                         {% endif %}
                     {% endfor %}
                 </ul>

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="216fc1cb-cfdf-4567-b338-690c35207278" name="Default Changelist" comment="" />
+    <list default="true" id="216fc1cb-cfdf-4567-b338-690c35207278" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/carte.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/carte.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/carte_category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/carte_category.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,7 +155,9 @@
       <workItem from="1605863213989" duration="32000" />
       <workItem from="1606141662493" duration="6487000" />
       <workItem from="1606222337388" duration="16000" />
-      <workItem from="1609939210814" duration="10805000" />
+      <workItem from="1609939210814" duration="11952000" />
+      <workItem from="1610050710397" duration="10000" />
+      <workItem from="1610375511357" duration="4319000" />
     </task>
     <servers />
   </component>

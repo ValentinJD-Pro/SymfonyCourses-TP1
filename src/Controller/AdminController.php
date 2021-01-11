@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Category;
 use App\Entity\Dish;
+use App\Entity\Allergen;
 use App\Repository\AllergenRepository;
 use App\Repository\CategoryRepository;
 use App\Repository\DishRepository;
@@ -54,13 +55,11 @@ class AdminController extends AbstractController
                     }
                     $dish->setName($dishArray["name"]);
                     $dish->setCalories($dishArray["calories"]);
-                    dd($dishArray["price"]);
-                    $dish->setPrice($dishArray["price"]);
+                    $dish->setPrice(floatval(str_replace(",",".",$dishArray["price"])));
                     $dish->setDescription($dishArray["text"]);
                     $dish->setSticky($dishArray["sticky"]);
                     $dish->setImage($dishArray["image"]);
                     $dish->setCategory($category);
-                    dd($dish);
 
                     foreach($dishArray["allergens"] as $allergenArray)
                     {
