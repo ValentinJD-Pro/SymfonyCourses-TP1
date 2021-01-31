@@ -1,0 +1,49 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block title %}ClientOrder index{% endblock %}
+
+{% block content %}
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <h1 class=titleAdmin>ClientOrder index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Time</th>
+                <th>PrixTotal</th>
+                <th>State</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for client_order in client_orders %}
+            <tr>
+                <td>{{ client_order.id }}</td>
+                <td>{{ client_order.time ? client_order.time|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ client_order.prixTotal }}</td>
+                <td>{{ client_order.state }}</td>
+                <td>
+                    <a href="{{ path('client_order_show', {'id': client_order.id}) }}">show</a>
+                    <a href="{{ path('client_order_edit', {'id': client_order.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a  class="btnLarge"  href="{{ path('client_order_new') }}">Create new</a>
+    <style>
+        .table td,.table th{
+            width:calc(100%/5);
+        }
+    </style>
+{% endblock %}

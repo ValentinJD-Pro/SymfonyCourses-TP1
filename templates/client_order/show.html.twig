@@ -1,0 +1,32 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block title %}ClientOrder{% endblock %}
+
+{% block content %}
+    <h1 class=titleAdmin>ClientOrder</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Time</th>
+                <th>PrixTotal</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ client_order.id }}</td>
+                <td>{{ client_order.time ? client_order.time|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ client_order.prixTotal }}</td>
+                <td>{{ client_order.state }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a  class="adminBtn" href="{{ path('client_order_index') }}">back to list</a>
+
+    <a  class="adminBtn" href="{{ path('client_order_edit', {'id': client_order.id}) }}">edit</a>
+<div class="adminDel">
+    {{ include('client_order/_delete_form.html.twig') }}</div>
+{% endblock %}

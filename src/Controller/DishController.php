@@ -39,7 +39,10 @@ class DishController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($dish);
             $entityManager->flush();
-
+            $this->addFlash(
+                'notice',
+                $form["Name"]->getData().' created !'
+            );
             return $this->redirectToRoute('dish_index');
         }
 
@@ -69,7 +72,10 @@ class DishController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
-
+            $this->addFlash(
+                'notice',
+                $form["Name"]->getData().' updated !'
+            );
             return $this->redirectToRoute('dish_index');
         }
 
@@ -89,7 +95,10 @@ class DishController extends AbstractController
             $entityManager->remove($dish);
             $entityManager->flush();
         }
-
+        $this->addFlash(
+            'notice',
+            $dish->getName().' deleted !'
+        );
         return $this->redirectToRoute('dish_index');
     }
 

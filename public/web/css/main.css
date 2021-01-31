@@ -165,7 +165,9 @@ footer>p{
     list-style-type: circle;
     font-size: 1.5em;
 }
-
+#listEqp>li{
+    padding-top: .4em;
+}
 
 
 
@@ -219,9 +221,7 @@ footer>p{
 
 
 
-#content{
-    margin-bottom: 8em;
-}
+
 
 
 
@@ -309,24 +309,82 @@ footer>p{
 }
 
 
-.adminDel form>div{
+.adminDel form>div,.login{
     width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.adminDel form>div>div{
+.adminDel form>div>div,.login>div{
     padding-top: 1em;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-.adminDel form>div>div>label{
+.adminDel form>div>div>label,.login>div>label{
     padding-right: 2em;
 }
 
 
+
+
+
+.flash-notice{
+    position: fixed;
+    min-width:250px;
+    right: 0;
+    font-size: 1.2em;
+    padding: 1em;
+    color:white;
+    background-color: #353a3f;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:.5em;
+}
+
+.btnCenter{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#planning{
+    width: calc(100% - 4em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em;
+    margin-bottom: 100px;
+}
+#planning h3{
+    font-size: 1.5em;
+    padding: .5em 0;
+}
+#plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#plan>div{
+    padding: 1em;
+}
+#planning ul,#planning>#plan>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#planning ul li{
+    padding: .2em;
+}
 
 

@@ -35,10 +35,14 @@ class AllergenController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($allergen);
             $entityManager->flush();
-
+            $this->addFlash(
+                'notice',
+                $form["name"]->getData().' created !'
+            );
             return $this->redirectToRoute('allergen_index');
         }
 
@@ -68,7 +72,10 @@ class AllergenController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
-
+            $this->addFlash(
+                'notice',
+                $form["name"]->getData().' updated !'
+            );
             return $this->redirectToRoute('allergen_index');
         }
 
@@ -88,6 +95,10 @@ class AllergenController extends AbstractController
             $entityManager->remove($allergen);
             $entityManager->flush();
         }
+        $this->addFlash(
+            'notice',
+            $allergen->getName().' deleted !'
+        );
 
         return $this->redirectToRoute('allergen_index');
     }

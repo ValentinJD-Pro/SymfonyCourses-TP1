@@ -11,14 +11,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="216fc1cb-cfdf-4567-b338-690c35207278" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Command/RestoPeopleImportCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/RhService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/partials/adminHeader.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/partials/team_today.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/web/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/web/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AllergenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AllergenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BlockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlockController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DishController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Dish1Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Dish1Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Dish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/allergen/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/allergen/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dish/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dish/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dish/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dish/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/partials/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/partials/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,13 +179,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP" />
-      <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP\templates\admin" />
-      <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP\src\privateFiles" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP\templates\admin" />
+      <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP\templates" />
+      <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP" />
+      <recent name="C:\Users\Valentin\Desktop\Workspaces\Workspace_Symfony\TP-Symfony\TP\src\privateFiles" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -192,7 +216,7 @@
       <workItem from="1611923818939" duration="38000" />
       <workItem from="1612026227630" duration="12565000" />
       <workItem from="1612043332406" duration="5932000" />
-      <workItem from="1612049522967" duration="9905000" />
+      <workItem from="1612049522967" duration="31705000" />
     </task>
     <servers />
   </component>
@@ -216,15 +240,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser/1920.5.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606146024274" />
+    <state x="629" y="214" key="#com.intellij.ide.util.MemberChooser" timestamp="1612107138897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="214" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1612107138897" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612040297347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1612040297347" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.5.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606146176908" />
-    <state x="622" y="260" key="NewPhpClassDialog" timestamp="1612036113635">
+    <state x="622" y="260" key="NewPhpClassDialog" timestamp="1612100136485">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="622" y="260" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1612036113635" />
+    <state x="622" y="260" key="NewPhpClassDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1612100136485" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605706140406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

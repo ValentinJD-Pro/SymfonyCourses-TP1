@@ -1,0 +1,13 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block title %}Edit ClientOrder{% endblock %}
+
+{% block content %}
+    <h1 class=titleAdmin>Edit ClientOrder</h1>
+<div class="adminDel">
+    {{ include('client_order/_form.html.twig', {'button_label': 'Update'}) }}</div>
+
+    <a class="adminBtn"  href="{{ path('client_order_index') }}">back to list</a>
+<div class="adminDel">
+    {{ include('client_order/_delete_form.html.twig') }}</div>
+{% endblock %}

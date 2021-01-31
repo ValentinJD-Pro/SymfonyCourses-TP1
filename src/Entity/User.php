@@ -3,13 +3,16 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\HasLifecycleCallbacks()
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id
@@ -19,9 +22,20 @@ class User
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=180, unique=true, nullable=true)
      */
     private $username;
+
+    /**
+     * @ORM\Column(type="json", nullable=true)
+     */
+    private $roles = [];
+
+    /**
+     * @var string The hashed password
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $password;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -46,7 +60,7 @@ class User
     /**
      * @ORM\Column(type="boolean")
      */
-    private $enabled;
+    private $enabled=true;
 
     /**
      * @ORM\Column(type="datetime")
@@ -54,10 +68,19 @@ class User
     private $createdAt;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime",nullable=true)
      */
     private $updatedAt;
 
+    /**
+     * @ORM\OneToMany(targetEntity=ClientOrder::class, mappedBy="user")
+     */
+    private $clientOrders;
+
+    public function __construct()
+    {
+        $this->clientOrders = new ArrayCollection();
+    }
 
     /**
      * @ORM\PrePersist
@@ -177,7 +200,85 @@ class User
         return $this;
     }
 
-    public function __toString() {
-        return $this->username;
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
+    {
+        $roles= $this->roles;
+        $roles[] = 'ROLE_USER';
+        return array_unique($roles);
     }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getPassword(): string
+    {
+        return (string) $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+
+    }
+
+    public function __toString() {
+        return (string) $this->username;
+    }
+
+    /**
+     * @return Collection|ClientOrder[]
+     */
+    public function getClientOrders(): Collection
+    {
+        return $this->clientOrders;
+    }
+
+    public function addClientOrder(ClientOrder $clientOrder): self
+    {
+        if (!$this->clientOrders->contains($clientOrder)) {
+            $this->clientOrders[] = $clientOrder;
+            $clientOrder->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeClientOrder(ClientOrder $clientOrder): self
+    {
+        if ($this->clientOrders->removeElement($clientOrder)) {
+            // set the owning side to null (unless already changed)
+            if ($clientOrder->getUser() === $this) {
+                $clientOrder->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+
 }

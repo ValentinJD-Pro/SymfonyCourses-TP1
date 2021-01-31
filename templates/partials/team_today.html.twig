@@ -1,0 +1,24 @@
+
+<div id="planning">
+    <h3>{{ planning.date }}</h3>
+
+    <div id="plan">
+    <div>
+    <h3>Midi</h3>
+    <ul>
+        {% for employee in planning.midi %}
+            <li>{{ employee.firstname }} {{ employee.lastname }} ({{ employee.jobtitle }})</li>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <div>
+    <h3>Soir</h3>
+    <ul>
+        {% for employee in planning.soir %}
+            <li>{{ employee.firstname }} {{ employee.lastname }} ({{ employee.jobtitle }})</li>
+        {% endfor %}
+    </ul>
+    </div>
+    </div>
+</div>
