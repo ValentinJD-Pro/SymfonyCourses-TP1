@@ -3,44 +3,38 @@
 {% block title %}Dish{% endblock %}
 
 {% block body %}
-    <h1>Dish</h1>
+    <h1 class=titleAdmin>Dish</h1>
 
     <table class="table">
-        <tbody>
+        <thead>
             <tr>
                 <th>Id</th>
-                <td>{{ dish.id }}</td>
-            </tr>
-            <tr>
                 <th>Name</th>
-                <td>{{ dish.Name }}</td>
-            </tr>
-            <tr>
                 <th>Calories</th>
-                <td>{{ dish.Calories }}</td>
-            </tr>
-            <tr>
                 <th>Price</th>
-                <td>{{ dish.Price }}</td>
-            </tr>
-            <tr>
                 <th>Image</th>
-                <td><img src="{{ dish.Image }}" alt="img"></td>
-            </tr>
-            <tr>
                 <th>Description</th>
-                <td>{{ dish.Description }}</td>
-            </tr>
-            <tr>
                 <th>Sticky</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ dish.id }}</td>
+                <td>{{ dish.Name }}</td>
+                <td>{{ dish.Calories }}</td>
+                <td>{{ dish.Price }}</td>
+                <td><img src="{{ dish.Image }}" alt="img"></td>
+                <td>{{ dish.Description }}</td>
                 <td>{{ dish.Sticky ? 'Yes' : 'No' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('dish_index') }}">back to list</a>
+    <a class="adminBtn" href="{{ path('dish_index') }}">back to list</a>
 
-    <a href="{{ path('dish_edit', {'id': dish.id}) }}">edit</a>
+    <a class="adminBtn" href="{{ path('dish_edit', {'id': dish.id}) }}">edit</a>
 
+    <div class="adminDel">
     {{ include('dish/_delete_form.html.twig') }}
+    </div>
 {% endblock %}

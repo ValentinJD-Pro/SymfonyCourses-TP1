@@ -2,8 +2,10 @@
 
 namespace App\Form;
 
+use App\Controller\DishController;
 use App\Entity\Dish;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -11,9 +13,12 @@ class Dish1Type extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $d=new DishController();
         $builder
             ->add('Name')
-            ->add('Calories')
+            ->add('Calories', ChoiceType::class, [
+                'choices'  => $d->_availableCalories(),
+            ])
             ->add('Price')
             ->add('Image',null,[
                 'required' =>false,

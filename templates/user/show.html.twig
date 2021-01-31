@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1 class=titleAdmin>User</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>JotTitle</th>
+                <th>Enabled</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.jotTitle }}</td>
+                <td>{{ user.enabled ? 'Yes' : 'No' }}</td>
+                <td>{{ user.createdAt ? user.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ user.updatedAt ? user.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="adminBtn" href="{{ path('user_index') }}">back to list</a>
+
+    <a class="adminBtn" href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+
+<div class="adminDel">
+    {{ include('user/_delete_form.html.twig') }}</div>
+
+    <style>
+        .table td,.table th{
+            width:calc(100%/10);
+        }
+    </style>
+{% endblock %}

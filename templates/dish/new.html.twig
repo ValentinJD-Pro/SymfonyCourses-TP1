@@ -3,9 +3,10 @@
 {% block title %}New Dish{% endblock %}
 
 {% block body %}
-    <h1>Create new Dish</h1>
-
+    <h1 class=titleAdmin>Create new Dish</h1>
+    <div class="adminDel">
     {{ include('dish/_form.html.twig') }}
+    </div>
 
-    <a href="{{ path('dish_index') }}">back to list</a>
+    <a class="adminBtn" href="{{ path('dish_index') }}">back to list</a>
 {% endblock %}

@@ -92,4 +92,13 @@ class DishController extends AbstractController
 
         return $this->redirectToRoute('dish_index');
     }
+
+
+    function _availableCalories()
+    {
+        $calories = array ();
+        for ( $i = 10 ; $i <= 300 ; $i += 10 )
+            $calories [ $i ]= $i ;
+        return $calories ;
+    }
 }

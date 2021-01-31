@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Category{% endblock %}
+
+{% block body %}
+    <h1 class=titleAdmin>Category</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.Name }}</td>
+                <td>{{ category.Image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="adminBtn" href="{{ path('category_index') }}">back to list</a>
+
+    <a class="adminBtn" href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+<div class="adminDel">
+    {{ include('category/_delete_form.html.twig') }}</div>
+
+    <style>
+        .table td,.table th{
+            width:calc(100%/4);
+        }
+    </style>
+{% endblock %}

@@ -222,3 +222,111 @@ footer>p{
 #content{
     margin-bottom: 8em;
 }
+
+
+
+
+.table{
+    margin: 2em;
+    width:calc(100% - 4em);
+}
+.table td,.table th{
+    width:calc(100%/8);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 10px;
+}
+.table tr td:last-child{
+    display: flex;
+    flex-direction: column;
+}
+.table tr td:last-child a{
+    text-decoration: none;
+    color:white;
+    padding: 1em;
+    margin: .5em;
+    background-color: #B0413E;
+}
+.table tr td:last-child a:hover{
+    background-color: #B0413E90;
+}
+.table th{
+    background-color: #B0413E;
+    color: white;
+
+}
+.table tr:nth-child(2n){
+    background-color: #B0413E50;
+}
+.table img{
+    width: 100%;
+}
+
+.table tr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.btnLarge{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    background-color: #B0413E;
+    color:white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.btnLarge:hover::before{
+    content : ">";
+}
+.titleAdmin{
+    width: 100%;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+}
+
+.adminBtn,.adminDel .btn{
+    color:white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 2em;
+    padding: 1em;
+    background-color: #B0413E;
+    border-radius: 0;
+    border: none;
+}
+.adminBtn:hover,.adminDel .btn:hover{
+    background-color: #B0413E50;
+}
+
+
+.adminDel form>div{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.adminDel form>div>div{
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.adminDel form>div>div>label{
+    padding-right: 2em;
+}
+
+
+
+

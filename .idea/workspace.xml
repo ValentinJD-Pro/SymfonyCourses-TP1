@@ -11,28 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="216fc1cb-cfdf-4567-b338-690c35207278" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/web/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/BlockController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/day_dishes.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/footer.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials/header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.test" beforeDir="false" afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Allergen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Allergen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Dish.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DishRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DishRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/carte.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/carte.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/carte_category.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/carte_category.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/equipe.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/equipe.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/front/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/web/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/web/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Dish1Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Dish1Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dish/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dish/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dish/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dish/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dish/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +192,7 @@
       <workItem from="1611923818939" duration="38000" />
       <workItem from="1612026227630" duration="12565000" />
       <workItem from="1612043332406" duration="5932000" />
-      <workItem from="1612049522967" duration="4478000" />
+      <workItem from="1612049522967" duration="9905000" />
     </task>
     <servers />
   </component>
