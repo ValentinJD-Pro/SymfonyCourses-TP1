@@ -6,6 +6,7 @@ use App\Repository\DishRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=DishRepository::class)
@@ -21,6 +22,7 @@ class Dish
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $Name;
 
@@ -31,6 +33,8 @@ class Dish
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank()
+     * @Assert\Type(type={"int", "float"})
      */
     private $Price;
 
@@ -41,6 +45,13 @@ class Dish
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 10,
+     *      max = 100,
+     *      minMessage = "Must be at least {{ limit }} characters long",
+     *      maxMessage = "Cannot be longer than {{ limit }} characters"
+     * )
      */
     private $Description;
 
@@ -51,6 +62,7 @@ class Dish
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class)
+     * @Assert\NotBlank()
      */
     private $Category;
 

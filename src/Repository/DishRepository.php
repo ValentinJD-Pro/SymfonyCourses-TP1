@@ -47,4 +47,21 @@ class DishRepository extends ServiceEntityRepository
         ;
     }
     */
+
+
+    /**
+    * @return Dish[]
+    */
+    public function findStickies(int $category, int $limit): array
+    {
+        return $this->createQueryBuilder('d')
+            ->andWhere('d.Category = :category')
+            ->setParameter('category', $category)
+            ->andWhere('d.Sticky = :sticky')
+            ->setParameter('sticky', true)
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 }

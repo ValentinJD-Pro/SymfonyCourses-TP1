@@ -2,11 +2,36 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Restaurant{% endblock %}</title>
+        <link rel="icon" type="image/png" href="{{ asset('web/img/logo.png') }}" />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+
+        {% block stylesheets %}
+            <link href="{{ asset('web/css/main.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+
+        <style>{% block style %}{% endblock %}</style>
     </head>
+
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% block body %}
+        {% include 'partials/header.html.twig' %}
+
+
+
+        <div id="content">{% block content %}{% endblock %}</div>
+
+        {% include 'partials/footer.html.twig' %}
+
+
+
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% endblock %}
+
+
+    {% endblock %}
     </body>
+
+
 </html>

@@ -1,0 +1,10 @@
+<div id="platsAvant">
+    <ul>
+    {% for dish in dishes %}
+        <li>
+            <img src="{{ dish.image }}" alt="image">
+            <p>{{ dish.name }} - {{ dish.price }}€ - {{ dish.calories }}kcal</p>
+        </li>
+    {% endfor %}
+    </ul>
+</div>

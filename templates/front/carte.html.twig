@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Carte{% endblock %}
+{% block title %}Restaurant - Carte{% endblock %}
 
 
 
 
-{% block body %}
-    <ul>
+{% block content %}
+    <a class=retourBtn href="/">Retour</a>
+    <ul id="carte">
     {% for category in categories %}
         <li>
             <h1><a href="/carte/{{ category.id }}">{{ category.name }}</a></h1>
@@ -20,7 +21,7 @@
                     {% endif %}
 
                 {% endfor %}
-                <li>{{ count }}</li>
+                <li>( {{ count }} )</li>
             </ul>
         </li>
     {% endfor %}

@@ -1,9 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
-    <ul>
+{% block title %}Restaurant - Equipe{% endblock %}
+
+{% block content %}
+    <a class=retourBtn href="/">Retour</a>
+    <ul id="listEqp">
         {%  for user in eqp %}
-            <li>{{ user.firstname }} - {{ user.lastname }} - {{ user.email }} - {{ user.jotTitle }}</li>
+            <li>{{ user.firstname }} {{ user.lastname }} - {{ user.email }} - {{ user.jotTitle }}</li>
         {% endfor %}
     </ul>
 {% endblock %}

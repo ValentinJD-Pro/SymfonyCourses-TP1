@@ -1,28 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Carte{% endblock %}
+{% block title %}Restaurant - Carte{% endblock %}
 
-{% block body %}
+{% block content %}
+    <a class=retourBtn href="/carte">Retour</a>
     <ul>
-            <li>
-                <h1>{{ category.name }}</h1>
+            <li id="carteCat">
+                <h1>{{ category.name }} :</h1>
                 <ul>
                     {% for dish in dishes %}
                         {% if dish.category.id == category.id %}
-                            <li>{{ dish.name }} - {{ dish.price }}€ - {{ dish.calories }}kcal</li>
-                            <h5>Allergènes</h5>
-                            <p>
+                            <li>
+                                <p>{{ dish.name }} - {{ dish.price }}€ - {{ dish.calories }}kcal</p>
+                                <h5>Allergènes :</h5>
+                                <p>
                                 {% for allergen in dish.allergens %}
                                     {{ allergen.name }}
                                 {% else %}
                                     Pas d'allergènes !
                                 {% endfor %}
-                            </p>
+                                </p>
+                            </li>
                         {% endif %}
                     {% endfor %}
                 </ul>
             </li>
     </ul>
-
-    <a href="/carte">Retour</a>
 {% endblock %}
