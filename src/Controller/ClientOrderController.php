@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\ClientOrder;
 use App\Form\ClientOrderType;
+use App\Form\NewClientOrderType;
 use App\Repository\ClientOrderRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +32,7 @@ class ClientOrderController extends AbstractController
     public function new(Request $request): Response
     {
         $clientOrder = new ClientOrder();
-        $form = $this->createForm(ClientOrderType::class, $clientOrder);
+        $form = $this->createForm(NewClientOrderType::class, $clientOrder);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

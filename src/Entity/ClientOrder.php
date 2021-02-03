@@ -20,14 +20,16 @@ class ClientOrder
     private $id;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $time;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="clientOrders")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $user;
+
 
     /**
      * @ORM\ManyToOne(targetEntity=ClientTable::class, inversedBy="clientOrders")
@@ -45,7 +47,7 @@ class ClientOrder
     private $prixTotal;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255,nullable=true)
      */
     private $state;
 

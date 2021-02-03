@@ -20,7 +20,7 @@ class ClientOrderRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return ClientOrder[] Returns an array of ClientOrder objects
+    //  * @return Order[] Returns an array of Order objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ClientOrderRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?ClientOrder
+    public function findOneBySomeField($value): ?Order
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')
